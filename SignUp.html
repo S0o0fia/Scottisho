@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   <!-- <script src="ٍSignUp.js"></script>  -->
+    <link rel="shortcut icon" type="image/x-icon" href="Images/logo.png" />
+     <style>
+     #page
+     {
+        
+         height: 100%;
+         column-count: 2;  
+         columns: 50% 2;
+        
+        
+         
+     }
+     #slide1
+     {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        /* background-image: url('back3.jpg'); */
+       
+     }
+     #slide2
+
+     {
+        width: 100%;
+        height: 100%;
+        background-color: white; 
+        text-align: center; 
+         align-content: center;
+        align-items: center;
+        padding-top:10%;
+     }
+     .label
+     {
+         padding:10%;
+         margin-top: 10%;
+         font-size: 16px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     }
+     #title
+     {
+        padding:10%;
+         margin: 10%;
+         font-size: 38px;
+         font-weight: bold;
+         font-family: 'Courier New', Courier, monospace;
+     }
+     .input
+     {    
+          padding: 2%;
+          display: inline-block;
+          border: 2px solid rgb(209, 192, 192);
+          border-radius: 4px;
+          box-sizing: border-box;  
+          margin: auto;
+}
+
+   #signup
+   {
+    background-color: rgb(253, 95, 95);
+    border: none;
+    border-radius: 4px;
+      color: white;
+     padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+  cursor: pointer;
+
+   } 
+   .confirm 
+   {
+       color:red;
+       font-size: 12px;
+       visibility: hidden;
+   } 
+   #pass1eye , #pass2eye
+   {
+       width:5%;
+       height: 5%;
+   }
+   
+     </style>
+</head>
+<body>
+   <section id="page">
+        <div id="slide1">
+                         
+                <img src="Images/signupback.jpg" width="100%" height="50%"/>
+                <!-- <img src="back1.jpg" width="100%" height="100%"/> -->
+
+        </div>
+         <br>
+        <div id="slide2">
+           
+            <form>
+                <label  id="title">Sign Up</label> 
+                <br><br>           
+                <label class = "label">Username</label>     
+                <input type="text" name="username" id="username" class="input"/>
+                <br>
+                <label class="confirm" id="confuser"></label> '
+                <br><br>
+                <label class = "label">Password</label>    
+                <input type="password" name="password" id="password1" class="input"/> 
+                <img src="Images/eye.png" id="pass1eye"  onmouseover="show()" onmouseout="hide()" />
+                <br><br>         
+                <label class = "label">Confirm Pass</label>     
+                <input type="password" name=password" id="password2" class="input" />
+                <img src="Images/eye.png" id="pass2eye"  onmouseover="show1()" onmouseout="hide1()" />
+                <br>
+                <label class="confirm" id="confirm"></label>
+                <br><br>         
+                <label class = "label">Telephone</label>     
+                <input type="tel" name="telephone" id="telephone" class="input"/>
+                <br>
+                <label class="confirm" id="confphone"></label>
+                <br><br>         
+                <label class = "label">Address</label>   
+                <input type="text" name="address" id="address" class="input"/>
+                <br><br>         
+                <label class = "label">
+                    <input type="checkbox" name="agree" id="agree1"/>
+                    I Agree the condition and terms
+                    <br>
+                <label class="confirm" id="confagree"></label>
+                </label>
+                
+                <br><br>         
+                <input type="submit" id="signup" onclick="check(event)" value="Sign Up"><br><br> 
+             </form>
+           
+        </div>
+   </section> 
+   <script>
+   
+   function check(e)
+{ 
+   
+   //check the similraty 
+   var x = document.getElementById("password1");
+   var y =  document.getElementById("password2");
+   var tel = document.getElementById("telephone");
+   var username = document.getElementById("username");
+   var ch = document.getElementById("agree1");
+  if(x.value != y.value)
+{   
+    document.getElementById('confirm').innerHTML = "Password doesn't match";
+    document.getElementById('confirm').style.visibility="visible";
+    x.style.borderColor = "red";
+    y.style.borderColor = "red";
+    e.preventDefault();
+}
+else
+{
+    document.getElementById('confirm').style.visibility="hidden";
+    x.style.borderColor = "rgb(209, 192, 192)";
+    y.style.borderColor = "rgb(209, 192, 192)";
+} 
+   
+if(/[a-z][A-Z]{3,}/i.test(username.value) == false)
+{
+    document.getElementById('confuser').innerHTML = "your user name must up 3 letter and doesn't contain any number";
+    document.getElementById('confuser').style.visibility="visible";
+    username.style.borderColor = "red";
+    e.preventDefault();
+  
+}
+else
+{
+    document.getElementById('confuser').style.visibility="hidden";
+    username.style.borderColor = "rgb(209, 192, 192)";
+    
+}
+
+if(/(^?=(010)(012)(011))[0-9]{10}/i.test(tel.value) == false)
+{
+   document.getElementById('confphone').innerHTML = "invalid phone number";
+   document.getElementById('confphone').style.visibility="visible";
+   tel.style.borderColor = "red";
+   e.preventDefault();
+  
+}
+else
+{
+  document.getElementById('confphone').style.visibility="hidden";
+  tel.style.borderColor = "rgb(209, 192, 192)";
+
+}
+
+if(ch.checked == false)
+{
+   document.getElementById('confagree').innerHTML = "plaese check this field";
+   document.getElementById('confagree').style.visibility="visible";
+   ch.style.borderColor = "red";
+   e.preventDefault();
+}
+else
+{
+    
+  document.getElementById('confagree').style.visibility="hidden";
+  ch.style.borderColor = "rgb(209, 192, 192)"
+}
+
+}
+
+ 
+var pass =   document.getElementById("password1");
+var pass2 =   document.getElementById("password2");
+  function  show()
+ {
+     
+     document.getElementById("pass1eye").src="Images/noeye.png";
+     pass.type="text";
+ } 
+ function hide ()
+ {
+    document.getElementById("pass1eye").src="Images/eye.png";
+    pass.type="password";
+ }
+ function  show1()
+ {
+     
+     document.getElementById("pass2eye").src="Images/noeye.png";
+     pass2.type="text";
+ } 
+ function hide1 ()
+ {
+    document.getElementById("pass2eye").src="Images/eye.png";
+    pass2.type="password";
+ }
+   </script>
+   </body>
+</html>

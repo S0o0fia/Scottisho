@@ -1,0 +1,310 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Images/logo.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script s```rc="main.js"></script> -->
+    <style>
+      body{
+          background-color: gray;
+      }
+      #menu li
+      {
+          display: inline;
+          align-content: center;
+          text-align: center;
+          color: black;
+          padding: 1%;
+          text-shadow: 1px 1px white;
+          font-weight: bold;
+          align-self: center;
+          align-items: center;
+          align-self: center;
+          margin: auto;
+          font-size: 24px;
+      
+      }
+      #menu
+      {
+        align-self: center;
+          align-items: center;
+          align-self: center;
+          margin-bottom: 2%;
+          text-align: center;
+      }
+    #title
+    {
+        align-content: center;
+          text-align: center;
+          color: white;
+           font-weight: bold;
+          padding: 5%;
+          align-items: center;
+          align-self: center;
+          margin: auto;
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 44px;
+          text-shadow: 2px 2px black;
+    }
+    
+    header
+    {
+        align-items: center;
+          align-self: center;
+          margin: auto;
+          width: 100%; 
+    }
+    #body
+    {
+        column-count: 2;
+        column-width: 50%;
+        margin-top :15%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: white;
+        box-shadow: 2px 2px 2px 2px  black;
+       
+        
+       
+    }
+    #lunch
+    {
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    #dinner
+    {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    .restaurant_menu__list {
+  /* Just for this example */
+  list-style: none;
+  padding: 0;
+  font-size: 14px; /* For em cross-browser sizing */
+  
+  min-width: 320px; /* For mobile devices */
+  max-width: 500px; /* Custom max width for readbility */
+  align-self: center;
+          align-items: center;
+          align-self: center;
+          margin: auto;
+          text-align: center;
+  
+  
+}
+
+.restaurant_menu__row {
+  border-bottom: 2px dotted #B5ABAB;
+  padding: 2%;
+  /* Our dotted line, we can use border-image instead */
+  position: relative;
+  float: left;
+  line-height: 1.2em;  
+  
+  margin: -.9em 0 0 0;  
+  width: 100%;
+  
+  text-align: left;  
+}
+
+
+.restaurant_menu__meal {
+  padding-right: 3em; /* Custom number for space between text and right side of .restaurant_menu__row; must be greater than .restaurant_menu__price max-width to avoid overlapping */
+}
+
+.restaurant_menu__meal span {
+  margin:0;
+	position:relative;
+	top: 1.6em;
+	padding-right:5px; /* Custom number for space between text and dotted line */
+}
+
+.restaurant_menu__price {  
+	padding:1px 0 1px 5px;
+	position:relative;
+	top:.4em;
+	left:1px;/* ie6 rounding error*/
+	float:right;
+}
+ #body
+ {
+          align-self: center;
+          align-items: center;
+          align-self: center;
+          margin: auto;
+          text-align: center;
+
+ }
+ span
+ {
+    top: 50%;
+  
+  transform: translateY(-50%); 
+ }
+ img{
+     margin-right: 2%;
+ }
+    </style>
+</head>
+<body width="100%">
+    <section>
+
+      <header>
+          <p id="title">Menue</p>
+         
+          <ul id="menu">
+                <li id="lunch" onclick="showlunch()">Lunch</li>
+                <li id="dinner" onclick="showdinner()">Dinner</li>
+        </ul>  
+      </header>
+
+        <section  id="body">
+            
+                <section>               
+                    <ul class="restaurant_menu__list">
+                        
+                        <li class="restaurant_menu__row">
+                          <!-- Inside div we need inline element, to handle multiline meals -->
+                          
+                           <div class="restaurant_menu__meal"> 
+                         <span class="food"> <img  class="im"  width="10%" height="10%" src="Images/food00.jpg"/>
+                            Broiled Lobster Tail with Brown Butter Sauce</span>
+                        </div>
+                          <span class="restaurant_menu__price">€55</span>
+                        </li>
+                         <br> 
+                         <li class="restaurant_menu__row">
+                                <!-- Inside div we need inline element, to handle multiline meals -->
+                                
+                                 <div class="restaurant_menu__meal"> <span class="food"> 
+                                     <img class="im"  width="10%" height="10%" src="Images/food11.jpg"/>Homemade Tartar Sauce</span></div>
+                                <span class="restaurant_menu__price">€75</span>
+                              </li>
+                        <br>
+
+                        <li class="restaurant_menu__row">
+                                <!-- Inside div we need inline element, to handle multiline meals -->
+                                
+                                 <div class="restaurant_menu__meal"> <span class="food"> 
+                                     <img class="im" width="10%" height="10%" src="Images/food22.jpg"/>
+                                     Ginger-Soy Steamed Salmon with Spicy Maple Sauce</span></div>
+                                <span class="restaurant_menu__price">€115</span>
+                              </li>
+                       <br>
+
+                       <li class="restaurant_menu__row">
+                            <!-- Inside div we need inline element, to handle multiline meals -->
+                            
+                             <div class="restaurant_menu__meal"> <span class="food"> 
+                                 <img  class="im"  width="10%" height="10%" src="Images/food33.jpg"/>
+                                 Fish Taco Salad Bowl</span></div>
+                            <span class="restaurant_menu__price">€25</span>
+                          </li>
+                     <br>
+                     
+                    
+                         
+                           
+                      </ul>
+                    </section>
+  
+
+                <section>          
+                 <ul class="restaurant_menu__list">
+                        
+                            <li class="restaurant_menu__row">
+                              <!-- Inside div we need inline element, to handle multiline meals -->
+                              
+                               <div class="restaurant_menu__meal"> <span class="food"> 
+                                   <img  class="im"  width="10%" height="10%" src="Images/food44.jpg"/>
+                                   Angel Hair Pasta with Salmon, Arugula, and Creamy Lemon-Parmesan Sauce</span></div>
+                              <span class="restaurant_menu__price">€25</span>
+                            </li>
+                              <br>
+                              <li class="restaurant_menu__row">
+                                    <!-- Inside div we need inline element, to handle multiline meals -->
+                                    
+                                     <div class="restaurant_menu__meal"> <span class="food"> 
+                                         <img  class="im"  width="10%" height="10%" src="Images/food55.jpg"/>
+                                         Seafood Paella</span></div>
+                                    <span class="restaurant_menu__price">€25</span>
+                                  </li>
+                           <br>
+                            <li class="restaurant_menu__row">
+                                <!-- Inside div we need inline element, to handle multiline meals -->
+                                
+                                 <div class="restaurant_menu__meal"> <span class="food">
+                                 <img  class="im"  width="10%" height="10%" src="Images/food66.jpg"/>
+                                <span> Slow-Roasted Salmon with Sweet Chili Glaze and Scallions </span></span></div>
+                                <span class="restaurant_menu__price">€25</span>
+                              </li>
+                              <br>
+                              <li class="restaurant_menu__row">
+                                    <!-- Inside div we need inline element, to handle multiline meals -->
+                                       <div class="restaurant_menu__meal"> 
+                                         <span class="food">
+                                          <img  class="im" width="10%" height="10%" src="Images/food77.jpg"/>
+                                          Grilled Salmon </span></div>
+                                    <span class="restaurant_menu__price">€25</span>
+                                  </li>
+                               <br>
+                            
+                          </ul>
+                     </section>
+
+    </section>
+
+
+   <script>
+     var body = document.getElementById("body") ,
+      list = document.getElementsByClassName("restaurant_menu__list"),
+      title = document.getElementById("title")
+     , name1= ["Broiled Lobster Tail with Brown Butter Sauce" , "Homemade Tartar Sauce" ,
+      " Ginger-Soy Steamed Salmon with Spicy Maple Sauce "
+      ," Fish Taco Salad Bowl" ,"Seafood Paella" ,
+      " Slow-Roasted Salmon with Sweet Chili Glaze and Scallions" ," Grilled Salmon" ,  " Grilled Salmon"  ]
+
+    , name2= ["Quick Easy Fish Stew" , "Tuna Patties" ,"Shrimp Fried Rice" ,"Moqueca – Brazilian Fish Stew" 
+      ,"Fish Chowder" ,"Cioppino" ,"Smoked Salmon Pasta"  , "Cioppino"]
+
+    , src1=["Images/food00.jpg" ,"Images/food11.jpg" ,"Images/food22.jpg" , "Images/food33.jpg" ,"Images/food44.jpg"
+     ,"Images/food55.jpg" ,"Images/food66.jpg" ,"Images/food77.jpg"]
+    
+     , src2=["Images/0.jpg" ,"Images/1.jpg" ,"Images/2.jpg" , "Images/3.jpg" ,"Images/4.jpg" ,"Images/5.jpg" ,"Images/6.jpg" ,
+    "Images/7.jpg"] ,
+    food = document.getElementsByClassName("food"),
+    img = document.getElementsByClassName("img") ;
+
+    
+    function showlunch()
+     {
+        document.body.style.backgroundColor="grey";
+        title.style.color = "white";
+        body.style.backgroundColor="white";
+        list[0].style.color = "black";
+        list[1].style.color = "black";
+
+    }
+
+     function showdinner()
+     {
+        document.body.style.backgroundColor="white";
+        title.style.color = "black";
+        body.style.backgroundColor="grey";
+        list[0].style.color = "white";
+        list[1].style.color = "white";
+        
+      }
+    
+   
+   
+   </script>
+</body>
+</html>
